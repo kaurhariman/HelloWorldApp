@@ -1,4 +1,3 @@
-const { appendFile } = require('fs');
 const express = require('express')
 const cors = require("cors")
 const http = require('http');
@@ -23,7 +22,3 @@ app.listen(port, () => {
 app.get('/*', function(req,res){
   res.sendFile(path.join(distDir + '/index.html'))
 });
-
-// app.use('*', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'public/index.html'));
-// });
